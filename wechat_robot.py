@@ -212,8 +212,8 @@ if __name__ == '__main__':
     t = threading.Thread(target=thread_wechat)
     t.start()
 
-    # while True:
-    conn, addr = ok.accept()
-    t = threading.Thread(target=get_msg, args=(conn,))
-    t.start()
+    while True:
+        conn, addr = ok.accept()
+        t = threading.Thread(target=get_msg, args=(conn,))
+        t.start()
 
